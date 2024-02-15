@@ -1,0 +1,108 @@
+body {
+  font: 2rem "Indie Flower";
+  overflow-x: hidden;
+}
+
+section {
+  background-color: #666;
+  display: flex;
+  align-items: flex-start;
+  align-content: flex-start;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  min-height: 100vh;
+}
+
+section h2 {
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+section div {
+  background-color: rgb(255, 255, 204);
+  background-image: linear-gradient(rgb(255, 255, 204) 0%, rgb(231, 231, 174) 75%, rgb(205 205 143) 93%);
+  padding: 2em;
+  margin: 0.7em;
+  box-shadow: 5px 5px 7px rgba(33, 33, 33, 0.7);
+  transform: rotate(-4deg);
+  transition: transform 0.1s ease-in-out, box-shadow 0.2s ease-out;
+  animation: rotate-it 1s;
+}
+
+section div:nth-child(odd) {
+  background-color: rgb(204, 255, 204);
+  background-image: linear-gradient(rgb(204, 255, 204) 0%, rgb(184, 219, 184) 75%, rgb(146 180 146) 93%);
+  transform: rotate(4deg);
+}
+
+section div .first {
+  /* animation: showup 1s, showup 0.5s ease forwards; */
+  animation: rotate-it 1s;
+}
+
+section div .second {
+  /* animation: showup 1s, showup 0.5s ease forwards; */
+  animation: rotate-it 1s;
+}
+
+section div .third {
+  background-color: rgb(204, 204, 255);
+  background-image: linear-gradient(rgb(204, 204, 255) 0%, rgb(176, 176, 204) 75%, rgb(147 147 186) 93%);
+  transform: rotate(10deg);
+  /* animation: showup 1s, showup 8s ease forwards; */
+  animation: rotate-it 1s;
+}
+
+section div .fourth {
+  /* animation: showup 2s, showup 3s ease forwards; */
+  animation: rotate-it 1s;
+}
+
+section div .fifth {
+  /* animation: showup 3s, showup 7s ease forwards; */
+  animation: rotate-it 1s;
+}
+
+section div .sixth {
+  /* animation: showup 10s, showup 2s ease forwards; */
+  animation: rotate-it 1s;
+}
+
+section div .seventh {
+  /* animation: showup 1s, showup 12s ease forwards; */
+  animation: rotate-it 1s;
+}
+
+section div .eighth {
+  /* animation: showup 1s, showup 13s ease forwards; */
+  animation: rotate-it 1s;
+}
+
+section div:hover {
+  transform: scale(1.15);
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  cursor: pointer;
+}
+
+@keyframes showup {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes rotate-it {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
